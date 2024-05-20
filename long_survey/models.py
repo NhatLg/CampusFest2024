@@ -21,7 +21,7 @@ class Constants(BaseConstants):
     name_in_url = 'long_survey'
     players_per_group = None
     num_rounds = 1
-
+    EMO = ["emo_frustration","emo_satisfaction","emo_guilt","emo_curiosity","emo_stress","emo_enjoyment","emo_boredom"]
 
 class Subsession(BaseSubsession):
     pass
@@ -48,6 +48,7 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect
     )
     donate_amount = models.IntegerField(
+        initial = 0,
         choices = [
             [0, "0€"],
             [1, "1€"],
@@ -60,6 +61,7 @@ class Player(BasePlayer):
     )
     donate2_amount = models.IntegerField(
         label="",
+        initial = 0,
         choices = [
             [0, "0€"],
             [1, "1€"],
@@ -128,4 +130,7 @@ class Player(BasePlayer):
     emo_enjoyment = models.BooleanField(label= _("Enjoyment"), blank=True)
     emo_boredom = models.BooleanField(label= _("Boredom"), blank=True)
 
-    open_ended = models.StringField(label=_("Open-ended question: Share with us any thoughts, feelings, or emotions about the experiment:"))
+    open_ended = models.StringField(
+        label = _("Open-ended question: Share with us any thoughts, feelings, or emotions about the experiment:"),
+        blank = True
+    )

@@ -2,11 +2,33 @@
 {% load otree  i18n %}
 
 {% block title %}
-    Page title
+    {% blocktrans %}Questions{% endblocktrans %}
 {% endblock %}
 
 {% block content %}
 
+    <input type="checkbox" name="emo_frustration" value="True"> {{form.emo_frustration.label}}<br>
+    {% if form.emo_frustration.errors %}{{ form.emo_frustration.errors.0 }}{% endif %}
+
+    <input type="checkbox" name="emo_satisfaction" value="True"> {{form.emo_satisfaction.label}}<br>
+    {% if form.emo_satisfaction.errors %}{{ form.emo_satisfaction.errors.0 }}{% endif %}
+
+    <input type="checkbox" name="emo_guilt" value="True"> {{form.emo_guilt.label}}<br>
+    {% if form.emo_guilt.errors %}{{ form.emo_guilt.errors.0 }}{% endif %}
+
+    <input type="checkbox" name="emo_curiosity" value="True"> {{form.emo_curiosity.label}}<br>
+    {% if form.emo_curiosity.errors %}{{ form.emo_curiosity.errors.0 }}{% endif %}
+
+    <input type="checkbox" name="emo_stress" value="True"> {{form.emo_stress.label}}<br>
+    {% if form.emo_stress.errors %}{{ form.emo_stress.errors.0 }}{% endif %}
+
+    <input type="checkbox" name="emo_enjoyment" value="True"> {{form.emo_enjoyment.label}}<br>
+    {% if form.emo_enjoyment.errors %}{{ form.emo_enjoyment.errors.0 }}{% endif %}
+
+    <input type="checkbox" name="emo_boredom" value="True"> {{form.emo_boredom.label}}<br>
+    {% if form.emo_boredom.errors %}{{ form.emo_boredom.errors.0 }}{% endif %}
+
+    {% formfield "open_ended"%}
     {% next_button %}
 
 {% endblock %}

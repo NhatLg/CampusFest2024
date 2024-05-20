@@ -62,11 +62,21 @@ class _5_SurveyNoDonate(TransMixin, Page):
 
 class _6_SurveyEmo(TransMixin, Page):
     form_model = 'player'
-    form_fields = ["emo_frustration", "emo_satisfaction", "emo_guilt", "emo_curiosity",
-                   "emo_stress", "emo_enjoyment", "emo_boredom", "open_ended"]
+    form_fields = Constants.EMO + ["open_ended"]
+
+    def before_next_page(self):
+        self.player.payoff = c(5) if self.player.filled_code[0].lower() == 'j' else c(0)
 
 class _7_Thankyou(TransMixin, Page):
-    pass
+    def vars_for_template(self):
+        donated_amount = c(self.player.donate_amount + self.player.donate2_amount)
+        net_payoff = c(self.participant.payoff) - donated_amount
+        return dict(
+            donated_amount = donated_amount,
+            kept_amount = c(0) if net_payoff < 0 else net_payoff,
+            payoff = self.participant.payoff,
+            id_in_session = str(self.player.gender) + str(self.player.birth_year) + str(self.player.id_in_group)
+        )
 
 class ResultsWaitPage(TransMixin, WaitPage):
     pass
@@ -75,6 +85,6 @@ class ResultsWaitPage(TransMixin, WaitPage):
 
 page_sequence = [_1_WelcomePage, _2_CampusFestPage, _2_SlaveryPage,
                  _3_ResultPage, _4_DonateTask, _4_NoDonateTask,
-                 _5_SurveyDonateAfter, _5_SurveyNoDonate, ]
+                 _5_SurveyDonateAfter, _5_SurveyNoDonate, _6_SurveyEmo, _7_Thankyou]
 # 
-#                   _6_SurveyEmo, _7_Thankyou
+#

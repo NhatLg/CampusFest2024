@@ -1,0 +1,39 @@
+{% extends "global/Page.html" %}
+{% load otree  i18n %}
+
+{% block title %}
+    {% blocktrans %}Thank You!{% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+    {% if payoff == 0 %}
+        {% blocktrans %}
+            Thank you for participating in the experiment!<br>
+            Your earned {{payoff}}.<br>
+            In the following weeks, we will post the donations achieved through some of the participants in the experiment on our website:<br>
+            https://www.uni-kassel.de/fb07/ivwl/mikrooekonomik
+        {% endblocktrans %}
+    {% else %}
+        {% blocktrans %}
+            Thank you for participating in the experiment!<br>
+            Your earned {{payoff}} , from which you donated {{donated_amount}} and kept {{kept_amount}}.<br>
+            Please approach the table with a € sign to get your earnings. Remember to share your ID {{id_in_session}}<br>
+            In the following weeks, we will post the donations achieved through some of the participants in the experiment on our website:<br>
+            https://www.uni-kassel.de/fb07/ivwl/mikrooekonomik
+        {% endblocktrans %}
+    {% endif %}
+
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+    document.getElementById('treatment_num').value = getRandomInt(3) + 1;
+</script>
+
+{% endblock %}
