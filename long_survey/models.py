@@ -9,11 +9,11 @@ from otree.api import (
     currency_range,
 )
 from django.utils.translation import ugettext_lazy as _
-
-author = 'Your name here'
+import random
+author = 'Nhat Luong'
 
 doc = """
-Your app description
+Just a quick and dirty Otree Experiment For Campus Fest 2024 at Uni Kassel
 """
 
 
@@ -27,15 +27,17 @@ class Subsession(BaseSubsession):
     pass
 
 
+
 class Group(BaseGroup):
     pass
 
 
 class Player(BasePlayer):
+    treatment_num = models.IntegerField(initial = random.randit(1,4))
     num_campfest = models.IntegerField(
         choices=[12, 6, 3],
         widget=widgets.RadioSelect)
-    children_per = models.FloatField(
+    children_percent = models.FloatField(
         choices=[
             [3, "3%"],
             [0.9, "0.9%"],
