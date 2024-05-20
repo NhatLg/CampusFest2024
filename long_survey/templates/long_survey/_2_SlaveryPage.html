@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree  i18n %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+    {% blocktrans %}
+        Most technological devices, such as cell phones, contain cobalt.
+        More than 60% of the world's cobalt is found in the Democratic Republic of the Congo mines.
+        It has been documented that around 40,000 children, some as young as 6, are forced into labor in the mines.
+        They work under very harsh conditions, putting their life at risk and preventing them from going to school.
+        The case in the mines is an example of modern child slavery.
+    {% endblocktrans %}
+
+    {% formfields %}
+    {% next_button %}
+
+{% endblock %}

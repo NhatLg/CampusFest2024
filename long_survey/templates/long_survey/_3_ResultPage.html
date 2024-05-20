@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load otree  i18n %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+    {% if player.is_correct_answer_slavery or player.is_correct_answer_fest %}
+        {% blocktrans %}
+            Congratulations, your answer is correct!
+        {% endblocktrans %}
+    {% else %}
+        {% if player.is_treatment_A %}
+            {% blocktrans %}
+                Ups! You did not get that right,...<br>
+                …12% of forced labor in the world are children.
+            {% endblocktrans %}
+        {% else %}
+            {% blocktrans %}
+                Ups! You did not get that right,...<br>
+                …this year is the 6th  Campus Fest.
+            {% endblocktrans %}
+        {% endif %}
+    {% endif %}
+
+    {% next_button %}
+
+{% endblock %}

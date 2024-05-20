@@ -33,8 +33,10 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    treatment_num = models.IntegerField(initial = random.randit(1,4))
+    treatment_num = models.IntegerField(initial = random.randint(1,4))
     num_campfest = models.IntegerField(
+        label=_("Take a guest: Counting also today’s festival, how many Campus Fest have taken place "
+                "since the inauguration of the University of Kassel in 1971?"),
         choices=[12, 6, 3],
         widget=widgets.RadioSelect)
     children_percent = models.FloatField(
@@ -53,8 +55,8 @@ class Player(BasePlayer):
             [3, "3€"],
             [4, "4€"],
             [5, "5€"],
-        ]
-        widget = widgets.RadioSelect
+        ],
+        widget=widgets.RadioSelect
     )
     donate2_amount = models.IntegerField(
         choices = [
@@ -64,7 +66,7 @@ class Player(BasePlayer):
             [3, "3€"],
             [4, "4€"],
             [5, "5€"],
-        ]
+        ],
         widget = widgets.RadioSelect
     )
     filled_code = models.StringField()
@@ -73,11 +75,9 @@ class Player(BasePlayer):
         choices = [
             [1, _("Yes")],
             [2, _("No")],
-            [3, _("I am not sure")
-             ],
+            [3, _("I am not sure")]
+        ],
         widget = widgets.RadioSelect
-
-        ]
     )
     meaningful_work = models.IntegerField(
         label = _("How meaningful do you find their work on a scale from 1 (not at all) to 10 (very)?"),
@@ -85,7 +85,7 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect
     )
     gender = models.IntegerField(
-        label = _("With which gender do you identify?")
+        label = _("With which gender do you identify?"),
         choices = [
             [1, "Female"],
             [2, "Male"],
@@ -94,7 +94,7 @@ class Player(BasePlayer):
         ]
     )
     birth_year = models.IntegerField(
-        labels = _("Write you year of birth (i.e. 1998): "),
+        label = _("Write you year of birth (i.e. 1998): "),
         min = 1904,
         max = 2020,
     )
@@ -107,7 +107,7 @@ class Player(BasePlayer):
         ]
     )
     donate_other = models.IntegerField(
-        label = _("What do you think most people think is the appropriate amount to donate:")
+        label = _("What do you think most people think is the appropriate amount to donate:"),
         choices = [
             [0, "0€"],
             [1, "1€"],

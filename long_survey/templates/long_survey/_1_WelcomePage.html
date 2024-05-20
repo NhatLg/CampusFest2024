@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree  i18n %}
+
+{% block title %}
+    {% blocktrans %}Welcome to the experiment!{% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+    {% blocktrans %}
+        You will receive some information, complete a task, and answer questions.<br>
+        Depending on how you do the task, you may earn some money.<br>
+        The experiment lasts around 15 minutes.<br>
+        You must read carefully and respond honestly and independently.<br>
+        Please do not share the experiment's content with others; otherwise, it will be spoiled!<br>
+        You can only participate once.<br>
+        To receive the money is necessary that you complete everything until the END.<br>
+        Press the button whenever you are ready to start!<br>
+    {% endblocktrans %}
+    {% next_button %}
+
+{% endblock %}
