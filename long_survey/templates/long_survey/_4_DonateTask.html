@@ -2,10 +2,23 @@
 {% load otree  i18n %}
 
 {% block title %}
-    Page title
+    {% blocktrans %}
+        Hot Wire Game
+    {% endblocktrans %}
 {% endblock %}
 
 {% block content %}
+    {% blocktrans %}
+        Now you can play the hot wire game and earn some money.
+        You must guide the metal wand along the wire circuit without touching it until the end.
+        If you complete it, you will receive 5€; otherwise, you will receive nothing.
+        You have two chances to do it.
+        If you earn the 5€, you can donate part, all, or none of your earnings to Amnesty International.
+        Amnesty International fights for children's rights, documenting, informing, and supporting them.
+        How much would you like to donate?
+    {% endblocktrans %}
+
+    {% formfields %}
 
     {% next_button %}
 

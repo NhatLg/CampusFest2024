@@ -9,7 +9,7 @@ from otree.api import (
     currency_range,
 )
 from django.utils.translation import ugettext_lazy as _
-import random
+
 author = 'Nhat Luong'
 
 doc = """
@@ -33,7 +33,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    treatment_num = models.IntegerField(initial = random.randint(1,4))
+    treatment_num = models.IntegerField()
     num_campfest = models.IntegerField(
         label=_("Take a guest: Counting also today’s festival, how many Campus Fest have taken place "
                 "since the inauguration of the University of Kassel in 1971?"),
@@ -59,6 +59,7 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect
     )
     donate2_amount = models.IntegerField(
+        label="",
         choices = [
             [0, "0€"],
             [1, "1€"],
@@ -69,7 +70,9 @@ class Player(BasePlayer):
         ],
         widget = widgets.RadioSelect
     )
-    filled_code = models.StringField()
+    filled_code = models.StringField(
+        label = _("Sit and play as soon as you see one of the tables with the game available. Once you are done, ask the experimenter for the code to fill in here to continue: ")
+    )
     know_amnesty = models.IntegerField(
         label = _("Did you know Amnesty International from before?"),
         choices = [

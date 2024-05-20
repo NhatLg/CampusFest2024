@@ -74,6 +74,7 @@ class ResultsWaitPage(TransMixin, WaitPage):
 
 
 page_sequence = [_1_WelcomePage, _2_CampusFestPage, _2_SlaveryPage,
-                 _3_ResultPage,]
-# _4_DonateTask, _4_NoDonateTask,
-#                  _5_SurveyDonateAfter, _5_SurveyNoDonate, _6_SurveyEmo, _7_Thankyou
+                 _3_ResultPage, _4_DonateTask, _4_NoDonateTask,
+                 _5_SurveyDonateAfter, _5_SurveyNoDonate, ]
+# 
+#                   _6_SurveyEmo, _7_Thankyou
