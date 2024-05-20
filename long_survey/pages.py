@@ -10,20 +10,21 @@ class TransMixin:
         return super().get_context_data(**context)
 
 class _1_WelcomePage(TransMixin, Page):
-    pass
+    form_model = 'player'
+    form_fields = ["treatment_num"]
 
 class _2_CampusFestPage(TransMixin, Page):
     form_model = 'player'
     form_fields = ["num_campfest"]
 
-    def is_displayed(player):
-        return player.treatment_num == 1 or player.treatment_num == 2 # Treatment A
+    def is_displayed(self):
+        return self.player.treatment_num == 1 or self.player.treatment_num == 2 # Treatment A
 
 class _2_SlaveryPage(TransMixin, Page):
     form_model = 'player'
     form_fields = ["children_percent"]
-    def is_displayed(player):
-        return player.treatment_num == 3 or player.treatment_num == 4 # Treatment C
+    def is_displayed(self):
+        return self.player.treatment_num == 3 or self.player.treatment_num == 4 # Treatment C
 
 class _3_ResultPage(TransMixin, Page):
     
@@ -32,32 +33,32 @@ class _3_ResultPage(TransMixin, Page):
             is_treatment_A = (self.player.treatment_num == 1) or (self.player.treatment_num == 2),
             is_treatment_C = (self.player.treatment_num == 3) or (self.player.treatment_num == 4),
             is_correct_answer_slavery = self.player.children_percent == 12, 
-            is_correct_answer_fest = self.player.treatment_num == 6,
+            is_correct_answer_fest = self.player.num_campfest == 6,
         )
 
 class _4_DonateTask(TransMixin, Page):
     form_model = 'player'
     form_fields = ["donate_amount", "filled_code"]
-    def is_displayed(player):
-        return player.treatment_num == 1 or player.treatment_num == 3  # Treatment A1, C1
+    def is_displayed(self):
+        return self.player.treatment_num == 1 or self.player.treatment_num == 3  # Treatment A1, C1
 
 class _4_NoDonateTask(TransMixin, Page):
     form_model = 'player'
     form_fields = ["filled_code"]
-    def is_displayed(player):
-        return player.treatment_num == 2 or player.treatment_num == 4  # Treatment A2, C2
+    def is_displayed(self):
+        return self.player.treatment_num == 2 or self.player.treatment_num == 4  # Treatment A2, C2
 
 class _5_SurveyDonateAfter(TransMixin, Page):
     form_model = 'player'
     form_fields = ["donate2_amount", "know_amnesty", "meaningful_work", "gender", "birth_year", "uni_relation", "donate_other"]
-    def is_displayed(player):
-        return player.treatment_num == 2 or player.treatment_num == 4  # Treatment A2, C2
+    def is_displayed(self):
+        return self.player.treatment_num == 2 or self.player.treatment_num == 4  # Treatment A2, C2
 
 class _5_SurveyNoDonate(TransMixin, Page):
     form_model = 'player'
     form_fields = ["know_amnesty", "meaningful_work", "gender", "birth_year", "uni_relation", "donate_other"]
-    def is_displayed(player):
-        return player.treatment_num == 1 or player.treatment_num == 3  # Treatment A1, C1
+    def is_displayed(self):
+        return self.player.treatment_num == 1 or self.player.treatment_num == 3  # Treatment A1, C1
 
 class _6_SurveyEmo(TransMixin, Page):
     form_model = 'player'

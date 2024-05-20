@@ -17,5 +17,16 @@
         Press the button whenever you are ready to start!<br>
     {% endblocktrans %}
     {% next_button %}
+    <input type="hidden" name="treatment_num" id="treatment_num" />
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+    document.getElementById('treatment_num').value = getRandomInt(4);
+</script>
 
 {% endblock %}
