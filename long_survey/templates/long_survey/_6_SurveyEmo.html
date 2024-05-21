@@ -6,7 +6,9 @@
 {% endblock %}
 
 {% block content %}
-
+    {% blocktrans %}
+        Click on any of the following feelings and emotions if you have experienced it during the experiment:
+    {% endblocktrans %}
     <input type="checkbox" name="emo_frustration" value="True"> {{form.emo_frustration.label}}<br>
     {% if form.emo_frustration.errors %}{{ form.emo_frustration.errors.0 }}{% endif %}
 

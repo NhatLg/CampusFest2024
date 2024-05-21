@@ -67,7 +67,7 @@ class _6_SurveyEmo(TransMixin, Page):
     def before_next_page(self):
         self.player.payoff = c(5) if self.player.filled_code[0].lower() == 'j' else c(0)
 
-class _7_Thankyou(TransMixin, Page):
+class _7_ThankYou(TransMixin, Page):
     def vars_for_template(self):
         donated_amount = c(self.player.donate_amount + self.player.donate2_amount)
         net_payoff = c(self.participant.payoff) - donated_amount
@@ -85,6 +85,6 @@ class ResultsWaitPage(TransMixin, WaitPage):
 
 page_sequence = [_1_WelcomePage, _2_CampusFestPage, _2_SlaveryPage,
                  _3_ResultPage, _4_DonateTask, _4_NoDonateTask,
-                 _5_SurveyDonateAfter, _5_SurveyNoDonate, _6_SurveyEmo, _7_Thankyou]
+                 _5_SurveyDonateAfter, _5_SurveyNoDonate, _6_SurveyEmo, _7_ThankYou]
 # 
 #

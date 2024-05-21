@@ -40,6 +40,7 @@ class Player(BasePlayer):
         choices=[12, 6, 3],
         widget=widgets.RadioSelect)
     children_percent = models.FloatField(
+        label = _("Take a guess: Of the documented global forced labor (modern slavery), what percentage are children?"),
         choices=[
             [3, "3%"],
             [0.9, "0.9%"],
@@ -73,7 +74,7 @@ class Player(BasePlayer):
         widget = widgets.RadioSelect
     )
     filled_code = models.StringField(
-        label = _("Sit and play as soon as you see one of the tables with the game available. Once you are done, ask the experimenter for the code to fill in here to continue: ")
+        label = _("Sit and play as soon as you see one of the tables with the game available. Once you are done, ask the experimenter for the code to fill in here to continue")
     )
     know_amnesty = models.IntegerField(
         label = _("Did you know Amnesty International from before?"),
@@ -99,9 +100,9 @@ class Player(BasePlayer):
         ]
     )
     birth_year = models.IntegerField(
-        label = _("Write you year of birth (i.e. 1998): "),
+        label = _("Write you year of birth (i.e. 1998):"),
         min = 1904,
-        max = 2020,
+        max = 2008,
     )
     uni_relation = models.IntegerField(
         label = _("How do you relate to the university?"),
@@ -112,7 +113,7 @@ class Player(BasePlayer):
         ]
     )
     donate_other = models.IntegerField(
-        label = _("What do you think most people think is the appropriate amount to donate:"),
+        label = _("What do you think most people think is the appropriate amount to donate"),
         choices = [
             [0, "0€"],
             [1, "1€"],
@@ -131,6 +132,6 @@ class Player(BasePlayer):
     emo_boredom = models.BooleanField(label= _("Boredom"), blank=True)
 
     open_ended = models.StringField(
-        label = _("Open-ended question: Share with us any thoughts, feelings, or emotions about the experiment:"),
+        label = _("Open-ended question: Share with us any thoughts, feelings, or emotions about the experiment"),
         blank = True
     )
