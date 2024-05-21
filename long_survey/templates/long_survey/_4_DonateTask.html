@@ -8,6 +8,7 @@
 {% endblock %}
 
 {% block content %}
+
     {% blocktrans %}
         Now you can play the hot wire game and earn some money.<br>
         You must guide the metal wand along the wire circuit without touching it until the end.<br>
@@ -16,10 +17,25 @@
         If you earn the 5€, you can donate part, all, or none of your earnings to Amnesty International.<br>
         Amnesty International fights for children's rights, documenting, informing, and supporting them.<br>
 
-        How much would you like to donate?
+        How much would you like to donate?<br>
     {% endblocktrans %}
+    <div class="input-group slider" data-slider="">
+        <input type="range" name="donate_amount" min="0" max="5" step="0.5" oninput="updateDescription(this)">
+        <div class="input-group-append">
+            <span class="input-group-text" id="description" title="current value"></span>
+        </div>
+    </div>
+    <script>
+        let description = document.getElementById('description');
+        function updateDescription(input) {
+            let give = input.value;
+            console.log(give);
+            description.innerHTML= give + " Euro";
+        }
+    </script>
 
-    {% formfields %}
+
+    {% formfield player.filled_code %}
 
     {% next_button %}
 

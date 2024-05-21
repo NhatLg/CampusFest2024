@@ -33,6 +33,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    id_player = models.StringField()
     treatment_num = models.IntegerField()
     num_campfest = models.IntegerField(
         label=_("Take a guest: Counting also today’s festival, how many Campus Fest have taken place "
@@ -48,31 +49,33 @@ class Player(BasePlayer):
         ],
         widget=widgets.RadioSelect
     )
-    donate_amount = models.IntegerField(
-        initial = 0,
-        choices = [
-            [0, "0€"],
-            [1, "1€"],
-            [2, "2€"],
-            [3, "3€"],
-            [4, "4€"],
-            [5, "5€"],
-        ],
-        widget=widgets.RadioSelect
-    )
-    donate2_amount = models.IntegerField(
-        label="",
-        initial = 0,
-        choices = [
-            [0, "0€"],
-            [1, "1€"],
-            [2, "2€"],
-            [3, "3€"],
-            [4, "4€"],
-            [5, "5€"],
-        ],
-        widget = widgets.RadioSelect
-    )
+    donate_amount = models.FloatField(widget=widgets.Slider, min=0, max=5, initial=0, label="")
+    donate2_amount = models.FloatField(widget=widgets.Slider, min=0, max=5, initial=0, label="")
+    # donate_amount = models.IntegerField(
+    #     initial = 0,
+    #     choices = [
+    #         [0, "0€"],
+    #         [1, "1€"],
+    #         [2, "2€"],
+    #         [3, "3€"],
+    #         [4, "4€"],
+    #         [5, "5€"],
+    #     ],
+    #     widget=widgets.RadioSelect
+    # )
+    # donate2_amount = models.IntegerField(
+    #     label="",
+    #     initial = 0,
+    #     choices = [
+    #         [0, "0€"],
+    #         [1, "1€"],
+    #         [2, "2€"],
+    #         [3, "3€"],
+    #         [4, "4€"],
+    #         [5, "5€"],
+    #     ],
+    #     widget = widgets.RadioSelect
+    # )
     filled_code = models.StringField(
         label = _("Sit and play as soon as you see one of the tables with the game available. Once you are done, ask the experimenter for the code to fill in here to continue")
     )

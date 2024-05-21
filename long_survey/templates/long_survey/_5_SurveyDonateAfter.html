@@ -2,6 +2,9 @@
 {% load otree  i18n %}
 
 {% block title %}
+    {% blocktrans %}
+        Please Answer The Questions Below
+    {% endblocktrans %}
 {% endblock %}
 
 {% block content %}
@@ -11,7 +14,27 @@
     How much would you like to donate?<br>
     If you have not earned anything, just state the amount you would have liked to donate:
 {% endblocktrans %}
-    {% formfields %}
+    <div class="input-group slider" data-slider="">
+        <input type="range" name="donate2_amount" min="0" max="5" step="0.5" oninput="updateDescription(this)">
+        <div class="input-group-append">
+            <span class="input-group-text" id="description" title="current value"></span>
+        </div>
+    </div>
+    <script>
+        let description = document.getElementById('description');
+        function updateDescription(input) {
+            let give = input.value;
+            console.log(give);
+            description.innerHTML= give + " Euro";
+        }
+    </script>
+
+    {% formfield "know_amnesty" %}
+    {% formfield "meaningful_work" %}
+    {% formfield "gender" %}
+    {% formfield "birth_year" %}
+    {% formfield "uni_relation" %}
+    {% formfield "donate_other" %}
     {% next_button %}
 
 {% endblock %}
