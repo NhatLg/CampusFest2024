@@ -1,6 +1,7 @@
 {% extends "global/Page.html" %}
 {% load otree  i18n %}
 
+
 {% block title %}
     {% blocktrans %}
         Hot Wire Game
@@ -20,12 +21,22 @@
         How much would you like to donate?<br>
     {% endblocktrans %}
     <div class="input-group slider" data-slider="">
-        <input type="range" name="donate_amount" min="0" max="5" step="0.5" oninput="updateDescription(this)">
+        <input type="range" id="slider_donate" name="donate_amount" min="0" max="5" step="0.5" oninput="updateDescription(this)">
         <div class="input-group-append">
             <span class="input-group-text" id="description" title="current value"></span>
         </div>
     </div>
+    <input type="hidden" name="checkslider1" value="" id="id_checkslider1"/>
+    {% if form.checkslider1.errors %}
+        <p style="background-color: #FFFF00">{{form.checkslider1.errors.0}}</p>
+    {% endif %}
+
+{% block scripts %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        $('input[name=donate_amount]').on('input', function(){
+            $('#id_checkslider1').val(1);
+        });
         let description = document.getElementById('description');
         function updateDescription(input) {
             let give = input.value;
@@ -33,6 +44,7 @@
             description.innerHTML= give + " Euro";
         }
     </script>
+{% endblock %}
 
 
     {% formfield player.filled_code %}

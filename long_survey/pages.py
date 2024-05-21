@@ -2,6 +2,7 @@ from otree.api import Currency as c, currency_range
 from ._builtin import Page, WaitPage
 from .models import Constants
 from django.utils import translation
+from django.utils.translation import ugettext_lazy as _
 
 class TransMixin:
     def get_context_data(self, **context):
@@ -38,9 +39,13 @@ class _3_ResultPage(TransMixin, Page):
 
 class _4_DonateTask(TransMixin, Page):
     form_model = 'player'
-    form_fields = ["donate_amount", "filled_code"]
+    form_fields = ["checkslider1", "donate_amount", "filled_code"]
     def is_displayed(self):
         return self.player.treatment_num == 1 or self.player.treatment_num == 3  # Treatment A1, C1
+
+    def checkslider1_error_message(self, value):
+        if not value:
+            return _('Please make your decision using slider')
 
 class _4_NoDonateTask(TransMixin, Page):
     form_model = 'player'
@@ -50,15 +55,26 @@ class _4_NoDonateTask(TransMixin, Page):
 
 class _5_SurveyDonateAfter(TransMixin, Page):
     form_model = 'player'
-    form_fields = ["donate2_amount", "know_amnesty", "meaningful_work", "gender", "birth_year", "uni_relation", "donate_other"]
+    form_fields = ["donate2_amount", "checkslider2", "know_amnesty", "meaningful_work", "gender", "birth_year", "uni_relation", "donate_other", "checkslider3"]
     def is_displayed(self):
         return self.player.treatment_num == 2 or self.player.treatment_num == 4  # Treatment A2, C2
 
+    def checkslider2_error_message(self, value):
+        if not value:
+            return _('Please make your decision using slider')
+    def checkslider3_error_message(self, value):
+        if not value:
+            return _('Please make your decision using slider')
+
 class _5_SurveyNoDonate(TransMixin, Page):
     form_model = 'player'
-    form_fields = ["know_amnesty", "meaningful_work", "gender", "birth_year", "uni_relation", "donate_other"]
+    form_fields = ["know_amnesty", "meaningful_work", "gender", "birth_year", "uni_relation", "donate_other", "checkslider3"]
     def is_displayed(self):
         return self.player.treatment_num == 1 or self.player.treatment_num == 3  # Treatment A1, C1
+
+    def checkslider3_error_message(self, value):
+        if not value:
+            return _('Please make your decision using slider')
 
 class _6_SurveyEmo(TransMixin, Page):
     form_model = 'player'

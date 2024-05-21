@@ -33,8 +33,14 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    #helper var
     id_player = models.StringField()
     treatment_num = models.IntegerField()
+    checkslider1 = models.IntegerField(blank=True)
+    checkslider2 = models.IntegerField(blank=True)
+    checkslider3 = models.IntegerField(blank=True)
+    
+    #actual var    
     num_campfest = models.IntegerField(
         label=_("Take a guest: Counting also today’s festival, how many Campus Fest have taken place "
                 "since the inauguration of the University of Kassel in 1971?"),
@@ -115,17 +121,19 @@ class Player(BasePlayer):
             [2, "I am a guest."]
         ]
     )
-    donate_other = models.IntegerField(
-        label = _("What do you think most people think is the appropriate amount to donate"),
-        choices = [
-            [0, "0€"],
-            [1, "1€"],
-            [2, "2€"],
-            [3, "3€"],
-            [4, "4€"],
-            [5, "5€"],
-        ]
-    )
+    donate_other = models.FloatField(
+        widget=widgets.Slider, min=0, max=5, initial=0)
+    # donate_other = models.IntegerField(
+    #     label = _("What do you think most people think is the appropriate amount to donate"),
+    #     choices = [
+    #         [0, "0€"],
+    #         [1, "1€"],
+    #         [2, "2€"],
+    #         [3, "3€"],
+    #         [4, "4€"],
+    #         [5, "5€"],
+    #     ]
+    # )
     emo_frustration = models.BooleanField(label= _("Frustration"), blank=True)
     emo_satisfaction = models.BooleanField(label= _("Satisfaction"), blank=True)
     emo_guilt = models.BooleanField(label= _("Guilt"), blank=True)

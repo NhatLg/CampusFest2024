@@ -1,5 +1,6 @@
 {% extends "global/Page.html" %}
 {% load otree  i18n %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 {% block title %}
     {% blocktrans %}
@@ -15,12 +16,19 @@
     If you have not earned anything, just state the amount you would have liked to donate:
 {% endblocktrans %}
     <div class="input-group slider" data-slider="">
-        <input type="range" name="donate2_amount" min="0" max="5" step="0.5" oninput="updateDescription(this)">
+        <input type="range" id="id_donate2_amount" name="donate2_amount" min="0" max="5" step="0.5" oninput="updateDescription(this)">
         <div class="input-group-append">
             <span class="input-group-text" id="description" title="current value"></span>
         </div>
     </div>
+    <input type="hidden" name="checkslider2" value="" id="id_checkslider2"/>
+    {% if form.checkslider2.errors %}
+        <p style="background-color: #FFFF00">{{form.checkslider2.errors.0}}</p>
+    {% endif %}
     <script>
+        $('input[name=donate2_amount]').on('input', function(){
+            $('#id_checkslider2').val(1);
+        });
         let description = document.getElementById('description');
         function updateDescription(input) {
             let give = input.value;
@@ -29,12 +37,39 @@
         }
     </script>
 
+
     {% formfield "know_amnesty" %}
     {% formfield "meaningful_work" %}
     {% formfield "gender" %}
     {% formfield "birth_year" %}
     {% formfield "uni_relation" %}
-    {% formfield "donate_other" %}
+
+    {% blocktrans %}
+        What do you think most people think is the appropriate amount to donate
+    {% endblocktrans %}
+    <div class="input-group slider" data-slider="">
+        <input type="range" id="id_donate_other" name="donate_other" min="0" max="5" step="0.5" oninput="updateDescription2(this)">
+        <div class="input-group-append">
+            <span class="input-group-text" id="description2" title="current value"></span>
+        </div>
+    </div>
+    <input type="hidden" name="checkslider3" value="" id="id_checkslider3"/>
+    {% if form.checkslider3.errors %}
+        <p style="background-color: #FFFF00">{{form.checkslider3.errors.0}}</p>
+    {% endif %}
+    <script>
+        $('input[name=donate_other]').on('input', function(){
+            $('#id_checkslider3').val(1);
+        });
+        let description2 = document.getElementById('description2');
+        function updateDescription2(input) {
+            let give = input.value;
+            console.log(give);
+            description2.innerHTML= give + " Euro";
+        }
+    </script>
+
+
     {% next_button %}
 
 {% endblock %}
