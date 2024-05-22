@@ -24,7 +24,7 @@ msgstr "Bitte treffen Sie Ihre Entscheidung."
 
 #: .\long_survey\models.py:47
 msgid ""
-"Take a guest: Counting also today’s festival, how many Campus Fest have "
+"Take a guess: Counting also today’s festival, how many Campus Fest have "
 "taken place since the inauguration of the University of Kassel in 1971?"
 msgstr ""
 "Schätzen Sie mal: Wenn man das heutige Fest mit einrechnet, wie viele "
@@ -338,7 +338,7 @@ msgstr ""
 "        Sie müssen den Metallstab bis zum Ende entlang des Drahtkreises "
 "führen, ohne ihn zu berühren.<br>\n"
 "        Wenn Sie so das Ende erreichen, erhalten Sie 5€; andernfalls "
-"erhalten nothing.<br>\n"
+"erhalten nichts.<br>\n"
 "        Sie haben zwei Versuche, das Spiel erfolgreich zu absolvieren.\n"
 "    "
 
@@ -400,7 +400,7 @@ msgid ""
 msgstr ""
 "\n"
 "        Klicken Sie auf jedes der folgenden Gefühle und Emotionen, die Sie "
-"währenddes Experiments erlebt haben:<br>\n"
+"während des Experiments erlebt haben:<br>\n"
 "    "
 
 #: .\long_survey\templates\long_survey\_7_ThankYou.html:5
@@ -427,7 +427,7 @@ msgstr ""
 "innen des Experiments auf unserer Website veröffentlichen: <br>\n"
 "            https://www.uni-kassel.de/fb07/ivwl/mikrooekonomik\n"
 "\n"
-"            Bitte, schließen Sie jetzt diese Seite\n"
+"            <br>Bitte, schließen Sie jetzt diese Seite\n"
 "        "
 
 #: .\long_survey\templates\long_survey\_7_ThankYou.html:19

@@ -44,7 +44,7 @@ class Player(BasePlayer):
     
     #actual var    
     num_campfest = models.IntegerField(
-        label=_("Take a guest: Counting also today’s festival, how many Campus Fest have taken place "
+        label=_("Take a guess: Counting also today’s festival, how many Campus Fest have taken place "
                 "since the inauguration of the University of Kassel in 1971?"),
         choices=[12, 6, 3],
         widget=widgets.RadioSelect)
