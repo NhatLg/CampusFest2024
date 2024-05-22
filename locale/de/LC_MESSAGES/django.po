@@ -28,7 +28,7 @@ msgid ""
 "taken place since the inauguration of the University of Kassel in 1971?"
 msgstr ""
 "Schätzen Sie mal: Wenn man das heutige Fest mit einrechnet, wie viele "
-"Campusfestehaben seit der Eröffnung der Universität Kassel im Jahr 1971 "
+"Campusfeste haben seit der Eröffnung der Universität Kassel im Jahr 1971 "
 "stattgefunden?"
 
 #: .\long_survey\models.py:52
