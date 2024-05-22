@@ -2,10 +2,18 @@ from os import environ
 
 SESSION_CONFIGS = [
     dict(
-       name='campus_fest_survey',
-       display_name="Campus Fest Survey",
+       name='campus_fest_survey_en',
+       display_name="Campus Fest Survey EN",
        num_demo_participants=5,
-       app_sequence=['long_survey']
+       app_sequence=['long_survey'],
+       language='en'
+    ),
+    dict(
+        name='campus_fest_survey_de',
+        display_name="Campus Fest Survey DE",
+        num_demo_participants=5,
+        app_sequence=['long_survey'],
+        language='de'
     ),
 ]
 

@@ -1,0 +1,465 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-22 13:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\long_survey\models.py:32
+msgid "Please make your decision using slider"
+msgstr "Bitte treffen Sie Ihre Entscheidung."
+
+#: .\long_survey\models.py:47
+msgid ""
+"Take a guest: Counting also today’s festival, how many Campus Fest have "
+"taken place since the inauguration of the University of Kassel in 1971?"
+msgstr ""
+"Schätzen Sie mal: Wenn man das heutige Fest mit einrechnet, wie viele "
+"Campusfestehaben seit der Eröffnung der Universität Kassel im Jahr 1971 "
+"stattgefunden?"
+
+#: .\long_survey\models.py:52
+msgid ""
+"Take a guess: Of the documented global forced labor (modern slavery), what "
+"percentage are children?"
+msgstr ""
+"Schätzen Sie mal: Wie viel Prozent der weltweit dokumentierten "
+"Zwangsarbeiter:innen(sogenannte moderne Sklaverei) sind Kinder?"
+
+#: .\long_survey\models.py:88
+msgid ""
+"Sit and play as soon as you see one of the tables with the game available. "
+"Once you are done, ask the experimenter for the code to fill in here to "
+"continue"
+msgstr ""
+"Sobald ein Tisch mit dem Spiel verfügbar ist, können Sie sich setzen und "
+"spielen.Um fortzufahren, fragen Sie den Versuchsleiter nach dem Code. Fügen "
+"Sie hier den Code ein:"
+
+#: .\long_survey\models.py:91
+msgid "Did you know Amnesty International from before?"
+msgstr "Kannten Sie Amnesty International bereits?"
+
+#: .\long_survey\models.py:93
+msgid "Yes"
+msgstr "Ja"
+
+#: .\long_survey\models.py:94
+msgid "No"
+msgstr "Nein"
+
+#: .\long_survey\models.py:95
+msgid "I am not sure"
+msgstr "Ich bin nicht sicher"
+
+#: .\long_survey\models.py:100
+msgid ""
+"How meaningful do you find their work on a scale from 1 (not at all) to 10 "
+"(very)?"
+msgstr ""
+"Wie bedeutungsvoll finden Sie ihre Arbeit auf einer Skala von 1 (überhaupt "
+"nicht)bis 10(sehr)?"
+
+#: .\long_survey\models.py:105
+msgid "With which gender do you identify?"
+msgstr "Mit welchem Geschlecht Identifizieren Sie sich?"
+
+#: .\long_survey\models.py:107
+msgid "Female"
+msgstr "Weiblich"
+
+#: .\long_survey\models.py:108
+msgid "Male"
+msgstr "Männlich"
+
+#: .\long_survey\models.py:109
+msgid "Other"
+msgstr "Sonstiges"
+
+#: .\long_survey\models.py:110
+msgid "I prefer not to say."
+msgstr "Ich möchte es nicht angeben "
+
+#: .\long_survey\models.py:114
+msgid "Write your year of birth (i.e. 1998):"
+msgstr "Geben Sie bitte Ihr Geburtsjahr an (z.B.1998):"
+
+#: .\long_survey\models.py:119
+msgid "How do you relate to the university?"
+msgstr "Welche Beziehung haben Sie zur Universität?"
+
+#: .\long_survey\models.py:121
+msgid "I am a student."
+msgstr "Ich bin Student:in"
+
+#: .\long_survey\models.py:122
+msgid "I am a university employee."
+msgstr "Ich bin Universitätsangestellte:r "
+
+#: .\long_survey\models.py:123
+msgid "I am a guest."
+msgstr "Ich bin Gast"
+
+#: .\long_survey\models.py:139
+msgid "Frustration"
+msgstr "Frustration"
+
+#: .\long_survey\models.py:140
+msgid "Satisfaction"
+msgstr "Zufriedenheit"
+
+#: .\long_survey\models.py:141
+msgid "Guilt"
+msgstr "Schuld"
+
+#: .\long_survey\models.py:142
+msgid "Curiosity"
+msgstr "Neugier"
+
+#: .\long_survey\models.py:143
+msgid "Stress"
+msgstr "Stress"
+
+#: .\long_survey\models.py:144
+msgid "Enjoyment"
+msgstr "Genuss"
+
+#: .\long_survey\models.py:145
+msgid "Boredom"
+msgstr "Langeweile"
+
+#: .\long_survey\models.py:148
+msgid ""
+"Open-ended question: Share with us any thoughts, feelings, or emotions about "
+"the experiment"
+msgstr ""
+"Offene Frage: Teilen Sie uns Ihre Gedanken, Gefühle oder Emotionen zum "
+"Experiment mit:"
+
+#: .\long_survey\templates\long_survey\_1_WelcomePage.html:5
+msgid "Welcome to the experiment!"
+msgstr "Willkommen zum Experiment!"
+
+#: .\long_survey\templates\long_survey\_1_WelcomePage.html:9
+msgid ""
+"\n"
+"        You will receive some information, complete a task, and answer "
+"questions.<br>\n"
+"        Depending on how you do the task, you may earn some money.<br>\n"
+"        The experiment lasts around 15 minutes.<br>\n"
+"        You must read carefully and respond honestly and independently.<br>\n"
+"        Please do not share the experiment's content with others; otherwise, "
+"it will be spoiled!<br>\n"
+"        You can only participate once.<br>\n"
+"        To receive the money is necessary that you complete everything until "
+"the END.<br>\n"
+"        Press the button whenever you are ready to start!<br>\n"
+"    "
+msgstr ""
+"\n"
+"        Sie werden Informationen erhalten, eine Aufgabe erledigen und "
+"Fragenbeantworten.<br>\n"
+"        In Abhängigkeit davon, wie Sie die Aufgabe erledigen, können Sie "
+"etwas Geld verdienen.<br>\n"
+"        Das Experiment dauert etwa 15 Minuten.<br>\n"
+"        Sie sollten die Fragen sorgfältig lesen und ehrlich sowie unabhängig "
+"beantworten.<br>\n"
+"        Bitte teilen Sie den Inhalt des Experiments keinem anderem mit,um "
+"die Ergebnisse nicht zu verfälschen!<br>\n"
+"        Sie dürfen nur einmal teilnehmen.<br>\n"
+"        Erledigen Sie alles bis zum ENDE, um das Geld zu erhalten.<br>\n"
+"        Bitte drücken Sie den Knopf, um zu beginnen.<br>\n"
+"    "
+
+#: .\long_survey\templates\long_survey\_2_CampusFestPage.html:5
+#: .\long_survey\templates\long_survey\_2_SlaveryPage.html:5
+msgid "Question"
+msgstr "Frage"
+
+#: .\long_survey\templates\long_survey\_2_CampusFestPage.html:9
+msgid ""
+"\n"
+"        The Campus Fest gathers all faculties of the University of Kassel "
+"together to share\n"
+"        their current projects and make students participate in them.<br>\n"
+"        The program consists not only of presentations but also music, food, "
+"and different department stands,\n"
+"        where one can check the projects carried out by researchers and "
+"students.<br>\n"
+"        It is also a good opportunity to discover the installations a bit "
+"more in detail as they offer tours.\n"
+"    "
+msgstr ""
+"\n"
+"        Beim Campusfest kommen alle Fakultäten der Universität Kassel "
+"zusammen,\n"
+"        um aktuelle Projekte vorzustellen und Studierende teilhaben zu "
+"lassen.<br>\n"
+"        Das Programm besteht nicht nur aus Vorträgen, sondern auch aus "
+"Musik, Essen und verschiedenen Abteilungsständen,\n"
+"        an denen man sich die von Forscher:innen und "
+"Studierendendurchgeführten Projekte ansehen kann.<br>\n"
+"        Es ist auch eine gute Gelegenheit, universitäre Einrichtungen "
+"etwasgenauer zu entdecken, da Führungen angeboten werden.\n"
+"    "
+
+#: .\long_survey\templates\long_survey\_2_SlaveryPage.html:9
+msgid ""
+"\n"
+"        Most technological devices, such as cell phones, contain cobalt."
+"<br>\n"
+"        More than 60%% of the world's cobalt is found in the Democratic "
+"Republic of the Congo mines.<br>\n"
+"        It has been documented that around 40,000 children, some as young as "
+"6 years old, are forced into labor in the mines.<br>\n"
+"        They work under very harsh conditions, putting their life at risk "
+"and preventing them from going to school.<br>\n"
+"        The case in the mines is an example of modern child slavery.\n"
+"    "
+msgstr ""
+"\n"
+"        Die meisten technischen Geräte wie Handys enthalten Kobalt.<br>\n"
+"        Mehr als 60%% des weltweiten Kobalts werden in den Minender "
+"Demokratischen Republik Kongo abgebaut.<br>\n"
+"        Es ist dokumentiert, dass rund 40.000 Kinder, einige davon erst "
+"sechs Jahre alt, zur Zwangsarbeit in den Minen gezwungen werden.<br>\n"
+"        Sie arbeiten unter sehr harten Bedingungen, gehen somit nicht zur "
+"Schule und setzen ihr Leben aufs Spiel.<br>\n"
+"        Der Fall dieser Minen ist ein Beispiel moderner Kindersklaverei.\n"
+"    "
+
+#: .\long_survey\templates\long_survey\_3_ResultPage.html:10
+msgid ""
+"\n"
+"            Congratulations, your answer is correct!\n"
+"        "
+msgstr ""
+"\n"
+"            Herzlichen Glückwunsch, Sie haben die Frage richtig "
+"beantwortet!\n"
+"        "
+
+#: .\long_survey\templates\long_survey\_3_ResultPage.html:15
+msgid ""
+"\n"
+"                Oops! You did not get that right,...<br>\n"
+"                …this year is the 6th  Campus Fest.\n"
+"            "
+msgstr ""
+"\n"
+"                Ups! Das war nicht ganz richtig,...<br>\n"
+"                …dieses Jahr findet das 6. Campus Fest statt.\n"
+"            "
+
+#: .\long_survey\templates\long_survey\_3_ResultPage.html:20
+msgid ""
+"\n"
+"                Oops! You did not get that right,...<br>\n"
+"                …12%% of forced labor in the world are children.\n"
+"            "
+msgstr ""
+"\n"
+"                Ups! Das war nicht ganz richtig,...<br>\n"
+"                …12%% der Zwangsarbeiter auf der Welt sind Kinder.\n"
+"            "
+
+#: .\long_survey\templates\long_survey\_4_DonateTask.html:6
+#: .\long_survey\templates\long_survey\_4_NoDonateTask.html:5
+msgid ""
+"\n"
+"        Hot Wire Game\n"
+"    "
+msgstr ""
+"\n"
+"        Hot Wire Game\n"
+"    "
+
+#: .\long_survey\templates\long_survey\_4_DonateTask.html:13
+msgid ""
+"\n"
+"        Now you can play the hot wire game and earn some money.<br>\n"
+"        You must guide the metal wand along the wire circuit without "
+"touching it until the end.<br>\n"
+"        If you complete it, you will receive 5€; otherwise, you will receive "
+"nothing.<br>\n"
+"        You have two chances to sucessfully complete it.<br>\n"
+"        If you earn the 5€, you can donate part, all, or none of your "
+"earnings to Amnesty International.<br>\n"
+"        Amnesty International fights for children's rights, documenting, "
+"informing, and supporting them.<br>\n"
+"\n"
+"        How much would you like to donate?<br>\n"
+"    "
+msgstr ""
+"\n"
+"        Jetzt können Sie das Hot-Wire-Spiel spielen und etwas Geld verdienen."
+"<br>\n"
+"        Sie müssen den Metallstab bis zum Ende entlang des Drahtkreises "
+"führen,ohne ihn zu berühren.<br>\n"
+"        Wenn Sie so das Ende erreichen, erhalten Sie 5€; andernfalls "
+"erhaltenSie nichts.<br>\n"
+"        Sie haben zwei Versuche, das Spiel erfolgreich zu absolvieren. <br>\n"
+"        Wenn Sie die 5 € verdienen, können Sie einen Teil Ihrer Einnahmen "
+"oder den gesamten Betrag oder gar nichts an Amnesty International spenden."
+"<br>\n"
+"        Amnesty International setzt sich für Kinderrechte ein, dokumentiert, "
+"informiert und unterstützt sie.<br>\n"
+"\n"
+"        Wie viel möchten Sie spenden?<br>\n"
+"    "
+
+#: .\long_survey\templates\long_survey\_4_NoDonateTask.html:11
+msgid ""
+"\n"
+"        Now you can play the hot wire game and earn some money.<br>\n"
+"        You must guide the metal wand along the wire circuit without "
+"touching it until the end.<br>\n"
+"        If you complete it, you will receive 5€; otherwise, you will receive "
+"nothing.<br>\n"
+"        You have two chances to sucessfully complete it.\n"
+"    "
+msgstr ""
+"\n"
+"        Jetzt können Sie das Hot-Wire-Spiel spielen und etwas Geld verdienen."
+"<br>\n"
+"        Sie müssen den Metallstab bis zum Ende entlang des Drahtkreises "
+"führen, ohne ihn zu berühren.<br>\n"
+"        Wenn Sie so das Ende erreichen, erhalten Sie 5€; andernfalls "
+"erhalten nothing.<br>\n"
+"        Sie haben zwei Versuche, das Spiel erfolgreich zu absolvieren.\n"
+"    "
+
+#: .\long_survey\templates\long_survey\_5_SurveyDonateAfter.html:6
+#: .\long_survey\templates\long_survey\_5_SurveyNoDonate.html:6
+msgid ""
+"\n"
+"        Please Answer The Questions Below\n"
+"    "
+msgstr ""
+"\n"
+"        Beantworten Sie bitte die folgenden Fragen\n"
+"    "
+
+#: .\long_survey\templates\long_survey\_5_SurveyDonateAfter.html:12
+msgid ""
+"\n"
+"    If you earned the 5€, you can donate part, all, or none of your earnings "
+"to Amnesty International.<br>\n"
+"    Amnesty International fights for children's rights, documenting, "
+"informing, and supporting them.<br>\n"
+"    How much would you like to donate?<br>\n"
+"    If you have not earned anything, just state the amount you would have "
+"liked to donate:\n"
+msgstr ""
+"\n"
+"    Wenn Sie die 5 € verdient haben, können Sie einen Teil Ihrer "
+"Einnahmenoder den gesamten Betrag oder gar nichts an Amnesty International "
+"spenden.<br>\n"
+"    Amnesty International setzt sich für Kinderrechte ein, dokumentiert, "
+"informiert und unterstützt sie.<br>\n"
+"    Wie viel möchten Sie spenden?<br>\n"
+"    Wenn Sie nichts verdienen haben, geben Sie einfach den Betrag, den Sie "
+"gerne gespendet hätten:\n"
+
+#: .\long_survey\templates\long_survey\_5_SurveyDonateAfter.html:47
+#: .\long_survey\templates\long_survey\_5_SurveyNoDonate.html:18
+msgid ""
+"\n"
+"        What do you think most people think is the appropriate amount to "
+"donate\n"
+"    "
+msgstr ""
+"\n"
+"        Was ist Ihrer Meinung nach aus Sicht der meisten Menschen ein "
+"angemessener Spendenbetrag:\n"
+"    "
+
+#: .\long_survey\templates\long_survey\_6_SurveyEmo.html:5
+msgid "Questions"
+msgstr "Fragen"
+
+#: .\long_survey\templates\long_survey\_6_SurveyEmo.html:9
+msgid ""
+"\n"
+"        Click on any of the following feelings and emotions if you have "
+"experienced it during the experiment:<br>\n"
+"    "
+msgstr ""
+"\n"
+"        Klicken Sie auf jedes der folgenden Gefühle und Emotionen, die Sie "
+"währenddes Experiments erlebt haben:<br>\n"
+"    "
+
+#: .\long_survey\templates\long_survey\_7_ThankYou.html:5
+msgid "Thank You!"
+msgstr "Vielen Dank!"
+
+#: .\long_survey\templates\long_survey\_7_ThankYou.html:10
+#, python-format
+msgid ""
+"\n"
+"            Thank you for participating in the experiment!<br>\n"
+"            Your earned %(payoff)s.<br>\n"
+"            In the following weeks, we will post the donations achieved "
+"through some of the participants in the experiment on our website:<br>\n"
+"            https://www.uni-kassel.de/fb07/ivwl/mikrooekonomik\n"
+"\n"
+"            You can close this page now.\n"
+"        "
+msgstr ""
+"\n"
+"            Vielen Dank für Ihre Teilnahme am Experiment!<br>\n"
+"            Ihr Gesamtverdienst beträgt %(payoff)s.<br>\n"
+"            In den folgenden Wochen werden wir die Spende der Teilnehmer:"
+"innen des Experiments auf unserer Website veröffentlichen: <br>\n"
+"            https://www.uni-kassel.de/fb07/ivwl/mikrooekonomik\n"
+"\n"
+"            Bitte, schließen Sie jetzt diese Seite\n"
+"        "
+
+#: .\long_survey\templates\long_survey\_7_ThankYou.html:19
+#, python-format
+msgid ""
+"\n"
+"            Thank you for participating in the experiment!<br>\n"
+"            Your earned %(payoff)s , from which you donated "
+"%(donated_amount)s and kept %(kept_amount)s.<br>\n"
+"            Please approach the table with a € sign to get your earnings. "
+"Remember to share your ID %(id_in_session)s<br>\n"
+"            In the following weeks, we will post the donations achieved "
+"through some of the participants in the experiment on our website:<br>\n"
+"            https://www.uni-kassel.de/fb07/ivwl/mikrooekonomik\n"
+"\n"
+"            Please do not close this page until you have collected your "
+"money.\n"
+"        "
+msgstr ""
+"\n"
+"            Vielen Dank für Ihre Teilnahme am Experiment!<br>\n"
+"            Ihr Gesamtverdienst beträgt %(payoff)s , wovon Sie  "
+"%(donated_amount)s gespendet und %(kept_amount)s.<br>\n"
+"            Bitte kommen Sie zum Tisch mit einem €-Zeichen, um Ihren Gewinn "
+"zu erhalten.Denken Sie daran, Ihre ID %(id_in_session)s mitzuteilen.<br>\n"
+"            In den folgenden Wochen werden wir die Spende der Teilnehmer:"
+"innendes Experiments auf unserer Website veröffentlichen:<br>\n"
+"            https://www.uni-kassel.de/fb07/ivwl/mikrooekonomik\n"
+"\n"
+"            Bitte schließen Sie diese Seite nicht, bis Sie Ihr Geld "
+"eingesammelt  haben.\n"
+"        "
+
+#~ msgid "Please make your decision using the slider"
+#~ msgstr "Bitte treffen Sie Ihre Entscheidung mithilfe des Schiebereglers"

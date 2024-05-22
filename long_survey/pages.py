@@ -45,7 +45,7 @@ class _4_DonateTask(TransMixin, Page):
 
     def checkslider1_error_message(self, value):
         if not value:
-            return _('Please make your decision using slider')
+            return Constants.err_msg
 
 class _4_NoDonateTask(TransMixin, Page):
     form_model = 'player'
@@ -61,10 +61,10 @@ class _5_SurveyDonateAfter(TransMixin, Page):
 
     def checkslider2_error_message(self, value):
         if not value:
-            return _('Please make your decision using slider')
+            return Constants.err_msg
     def checkslider3_error_message(self, value):
         if not value:
-            return _('Please make your decision using slider')
+            return Constants.err_msg
 
 class _5_SurveyNoDonate(TransMixin, Page):
     form_model = 'player'
@@ -74,7 +74,7 @@ class _5_SurveyNoDonate(TransMixin, Page):
 
     def checkslider3_error_message(self, value):
         if not value:
-            return _('Please make your decision using slider')
+            return Constants.err_msg
 
 class _6_SurveyEmo(TransMixin, Page):
     form_model = 'player'

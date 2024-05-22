@@ -16,18 +16,20 @@ doc = """
 Just a quick and dirty Otree Experiment For Campus Fest 2024 at Uni Kassel
 """
 
+TRNSL_ERR_MSG = 'Translation for this language does not exist'
+
+class Subsession(BaseSubsession):
+    def creating_session(self):
+        assert self.session.config.get('language', 'en') \
+               in Constants.translated_languages, TRNSL_ERR_MSG
 
 class Constants(BaseConstants):
     name_in_url = 'long_survey'
     players_per_group = None
     num_rounds = 1
     EMO = ["emo_frustration","emo_satisfaction","emo_guilt","emo_curiosity","emo_stress","emo_enjoyment","emo_boredom"]
-
-class Subsession(BaseSubsession):
-    pass
-
-
-
+    translated_languages = ["en", "de"]
+    err_msg = _('Please make your decision using slider')
 class Group(BaseGroup):
     pass
 
@@ -102,23 +104,23 @@ class Player(BasePlayer):
     gender = models.IntegerField(
         label = _("With which gender do you identify?"),
         choices = [
-            [1, "Female"],
-            [2, "Male"],
-            [3, "Other"],
-            [4, "I prefer not to say."],
+            [1, _("Female")],
+            [2, _("Male")],
+            [3, _("Other")],
+            [4, _("I prefer not to say.")],
         ]
     )
     birth_year = models.IntegerField(
-        label = _("Write you year of birth (i.e. 1998):"),
+        label = _("Write your year of birth (i.e. 1998):"),
         min = 1904,
         max = 2008,
     )
     uni_relation = models.IntegerField(
         label = _("How do you relate to the university?"),
         choices = [
-            [0, "I am a student."],
-            [1, "I am a university employee."],
-            [2, "I am a guest."]
+            [0, _("I am a student.")],
+            [1, _("I am a university employee.")],
+            [2, _("I am a guest.")]
         ]
     )
     donate_other = models.FloatField(
