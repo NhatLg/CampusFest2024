@@ -70,7 +70,7 @@ msgid ""
 "How meaningful do you find their work on a scale from 1 (not at all) to 10 "
 "(very)?"
 msgstr ""
-"Wie bedeutungsvoll finden Sie ihre Arbeit auf einer Skala von 1 (überhaupt "
+"Wie bedeutungsvoll finden Sie die Arbeit von Amnesty International auf einer Skala von 1 (überhaupt "
 "nicht) bis 10 (sehr)?"
 
 #: .\long_survey\models.py:105
